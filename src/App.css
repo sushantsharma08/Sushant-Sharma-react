@@ -39,6 +39,15 @@
   line-height: 50px;
 }
 
+.highlighted_about {
+  color: rgb(54, 81, 130);
+font-size: larger;
+}
+
+h1 {
+  color: rgb(44, 44, 44);
+}
+
 .highlighted {
   color: rgb(100, 83, 208);
 }
@@ -63,13 +72,17 @@
 .individual_sections {
   position: relative;
   z-index: 6;
-  min-height: 90vh;
-  border: 1px solid rgb(46, 46, 46);
+  min-height: 95vh;
+  /* border: 1px solid rgb(46, 46, 46); */
   text-align: center;
   padding: 5rem;
   padding-inline: 3rem;
   /* color:rgb(205, 131, 94) */
   /* background-color: rgba(12, 12, 68, 0.234); */
+}
+
+.content {
+  padding-top: 7rem;
 }
 
 li {
@@ -95,6 +108,11 @@ li {
   color: grey;
 }
 
+/* skills */
+.skills_section {
+  padding-top: 7rem;
+}
+
 .template_container {
   display: flex;
   flex-wrap: wrap;
@@ -110,19 +128,38 @@ li {
   margin: 1.2rem;
   padding: 1.5rem;
   /* display: flex; */
-  min-width: 400px;
+  min-width: 375px;
   height: 250px;
-
 }
-.sub-Heading{
+
+.glass:hover {
+  margin-inline: 3rem;
+  background: linear-gradient(135deg, rgba(73, 163, 156, 0.1), rgba(81, 121, 51, 0));
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(203, 251, 247, 0.1), rgba(225, 253, 203, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s ease-in-out;
+}
+
+.sub-Heading {
   text-align: right;
   font-size: x-large;
+  color: rgb(146, 193, 134);
 }
-.main_hr{
+
+.main_hr {
   margin-block: 10px;
-  outline:none;
-  border-color:rgb(87, 173, 144);
+  outline: none;
+  border-color: rgb(87, 173, 144);
 }
+
+
 .template_content {
   display: flex;
   justify-content: space-evenly;
@@ -130,17 +167,18 @@ li {
   /* margin-top: 1rem; */
 }
 
-.skill_items{
-  color: rgb(74, 74, 74);
+
+.skill_items {
+  color: rgb(57, 57, 57);
 }
+
 
 .front {
   /* margin-bottom: 0.2rem; */
   padding-block: 10px;
   white-space: nowrap;
   font-weight: 600;
-  color :rgb(134, 134, 134)
-
+  color: rgb(82, 82, 82)
 }
 
 @media only screen and (max-width: 600px) {
@@ -160,5 +198,14 @@ li {
     font-size: medium;
     margin-left: 6rem;
     margin-top: 10rem;
+  }
+
+  .Hero {
+    height: 100vh;
+    width: 99%;
+  }
+
+  .back{
+    display: none;
   }
 }
