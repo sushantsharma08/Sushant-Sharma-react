@@ -13,7 +13,7 @@
 
 .Hero {
   height: 100vh;
-  width: 50%;
+  width: 70%;
 }
 
 .intro {
@@ -106,16 +106,22 @@ li {
 .template {
   height: max-content;
   width: max-content;
-  border: 2px solid blue;
+  border: 2px solid rgba(63, 86, 110, 0.401);
   margin: 1.2rem;
   padding: 1.5rem;
   /* display: flex; */
-  min-width: 500px;
+  min-width: 400px;
   height: 250px;
 
 }
+.sub-Heading{
+  text-align: right;
+  font-size: x-large;
+}
 .main_hr{
   margin-block: 10px;
+  outline:none;
+  border-color:rgb(87, 173, 144);
 }
 .template_content {
   display: flex;
@@ -124,11 +130,17 @@ li {
   /* margin-top: 1rem; */
 }
 
+.skill_items{
+  color: rgb(74, 74, 74);
+}
+
 .front {
   /* margin-bottom: 0.2rem; */
-  padding: 0, 30px;
+  padding-block: 10px;
   white-space: nowrap;
   font-weight: 600;
+  color :rgb(134, 134, 134)
+
 }
 
 @media only screen and (max-width: 600px) {

@@ -8,10 +8,8 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import { Box } from '@mui/material';
 
 
@@ -62,7 +60,7 @@ const Education = () => {
 
           <AccordionDetails sx={{ backgroundColor: "#101214", color: "grey" }}>
 
-            <TableContainer component={Paper} >
+            {/* <TableContainer component={Paper} > */}
               <Table sx={{  backgroundColor: "#101214", border: "1px solid grey" }} aria-label="customized table" >
                 <TableHead >
                   <TableRow sx={{ color: "grey" }}>
@@ -81,7 +79,7 @@ const Education = () => {
                   ))}
                 </TableBody>
               </Table>
-            </TableContainer>
+            {/* </TableContainer> */}
 
 
 

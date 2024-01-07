@@ -8,7 +8,7 @@ import Skill from './Sections/Skill.tsx';
 import Contact from './Sections/Contact.tsx';
 import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
-import { Box, ThemeProvider } from "@mui/material";
+import { Box } from "@mui/material";
 import Footer from "./components/Footer.tsx";
 
 
@@ -42,6 +42,7 @@ function App() {
               />
             </h1>
           </Box>
+          
         </Box>
 
         <About />
