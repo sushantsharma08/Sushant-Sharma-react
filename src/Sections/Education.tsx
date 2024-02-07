@@ -62,7 +62,7 @@ const Education = () => {
 
           <AccordionDetails sx={{ backgroundColor: "#101214", color: "grey" }}>
 
-            {/* <TableContainer component={Paper} > */}
+            <TableContainer component={Paper} >
               <Table sx={{  backgroundColor: "#101214", border: "1px solid grey" }} aria-label="customized table" >
                 <TableHead >
                   <TableRow sx={{ color: "grey" }}>
@@ -81,7 +81,7 @@ const Education = () => {
                   ))}
                 </TableBody>
               </Table>
-            {/* </TableContainer> */}
+            </TableContainer>
 
 
 
