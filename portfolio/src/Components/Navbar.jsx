@@ -4,7 +4,7 @@ import {Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
+    <div style={{border:"2px solid black"}}>
       <span >  <Link style={{textDecoration:"none", color:"inherit"}}  to="/" >Home</Link></span>
       <span >  <Link style={{textDecoration:"none", color:"inherit"}}  to="/Education" >Education</Link></span>
       <span >  <Link style={{textDecoration:"none", color:"inherit"}}  to="/Skills" >Skills</Link></span>
