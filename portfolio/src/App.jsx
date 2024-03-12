@@ -12,13 +12,13 @@ import Projects from './Pages/Projects';
 function App() {
 
   return (
-    <div style={{ border: "2px solid red" }}>
+    <div >
 
       <Router>
 
         <Header />
 
-        <div style={{ border: "2px solid red" }}>
+        <div >
           <Routes >
             <Route path='/' element={<Home />} />
             <Route path='/Education' element={<Education />} />

@@ -4,7 +4,10 @@ import Navbar from './Navbar'
 const Header = () => {
   return (
     <>
-        <Navbar/>
+    <div >
+    <Navbar/>
+
+    </div>
     </>
   )
 }
