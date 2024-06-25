@@ -8,28 +8,18 @@
 }
 
 .header {
-  height: 100vh;
+  min-height: 100vh;
   /* border: 1px solid rgb(0, 255, 110); */
   display: flex;
 }
-
 .Hero {
-  /* border: 1px solid red; */
   height: 100vh;
   width: 50%;
-}
-
-.Greetingtext {
-  /* border: 1px solid blue; */
-  margin-top: 15rem;
-  position: relative;
-  left: -100px;
-  /* color:rgb(181, 144, 255); */
 }
 .intro{
   /* min-width: 20vw;
   border: 1px solid blue; */
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -65,7 +55,26 @@
 .individual_sections {
   position: relative;
   z-index: 6;
-  height: 100vh;
+  min-height: 100vh;
   border: 1px solid red;
+  text-align: center;
   /* background-color: rgba(12, 12, 68, 0.234); */
 }
+
+@media only screen and (max-width: 600px) {
+  .header{
+    flex-direction:column-reverse;
+
+  }
+  .Hero{
+    width: 100%;
+    /* border: 1px solid red; */
+
+  }
+  .intro{
+    padding-top: 2rem;
+    font-size: medium;
+    margin-left: 8rem;
+    margin-top: 10rem;
+  }
+}git commit -m "added responsiveness to current data"

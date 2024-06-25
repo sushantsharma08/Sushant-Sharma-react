@@ -2,7 +2,7 @@
 const About = () => {
   return (
     <div className={`individual_sections`} id="About">
-      <div className="fewLines">
+      {/* <div className="fewLines"> */}
 
         <p style={{ fontSize: "larger" }}>
 
@@ -10,7 +10,7 @@ const About = () => {
           <br />who likes to play and learn in my free time.
           <br />
           <br />
-          I mentor and inspire my juniors and friends, helping them advance in their careers providing a
+          I mentor and inspire my juniors and friends, help them advance their skills providing a
           collaborative
           and innovative environment. <br />
           I stay up-to-date with cutting-edge technologies and industry trends. I remain at the forefront of
@@ -26,7 +26,7 @@ const About = () => {
           grow
           along with.
         </p>
-      </div>
+      {/* </div> */}
     </div>
   )
 }
