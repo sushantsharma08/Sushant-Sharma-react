@@ -1,32 +1,58 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, ScrollControls, } from '@react-three/drei';
 import { Avatar } from './Avatar.tsx';
 const Hero = () => {
   return (
     <Canvas shadows
-    camera={{ position: [2, 2, 3], fov: 30 }}>
-      <OrbitControls />
-      <ambientLight intensity={1} />
-      <directionalLight
-        position={[-5, 5, 5]}
-        castShadow
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
-      />
-      <group position={[0, -1, 0]}>
-        <Avatar />
+      camera={{ position: [-1, 1, 5], fov: 30, }}
+    >
+      {/* <OrbitControls autoRotate /> */}
+      <ScrollControls pages={0}>
+        <ambientLight intensity={1} />
+        <directionalLight
+          position={[-5, 5, 5]}
+          color={"rgb(181, 144, 255)"}
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+        />
+        <directionalLight
+          position={[5, -5, -5]}
+          color={"magenta"}
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+        />
+        <group
+          position={[0,-1.2,-1]}
+        >
 
-      </group>
+          <Avatar scale={1.2}/>
 
-      <mesh
-        rotation={[-0.5 * Math.PI, 0, 0]}
-        position={[0, -1, 0]}
-        receiveShadow
-      >
-        <planeGeometry args={[10, 10, 1, 1]} />
-        <shadowMaterial transparent opacity={0.2} />
-      </mesh>
+          {/* <mesh scale={[0.8, 0.5, 0.8]}
+            position={[0, 0.2, -0.05]}
+          >
+            <boxGeometry />
+            <meshStandardMaterial color="white" />
+          </mesh> */}
+
+          <mesh
+            scale={5}
+            rotation={[-0.5 * Math.PI, 0, 0]}
+            position={[0, 0, 0]}
+            receiveShadow
+          >
+            <planeGeometry
+            />
+            <meshStandardMaterial color="grey" />
+            <shadowMaterial transparent opacity={0.2} />
+          </mesh>
+
+        </group>
+
+      </ScrollControls>
+
     </Canvas>
   )
 }
