@@ -1,6 +1,6 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, ScrollControls, } from '@react-three/drei';
+import { ScrollControls, } from '@react-three/drei';
 import { Avatar } from './Avatar.tsx';
 const Hero = () => {
   return (

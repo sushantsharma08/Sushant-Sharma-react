@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Navbar from "./components/Navbar.tsx";
 import './App.css'
 import About from './Sections/About.tsx';
@@ -10,7 +10,8 @@ import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
 
 function App() {
-  const [theme, useTheme] = useState("dark")
+  // const [theme, useTheme] = useState("dark")
+  let theme = "dark"
   return (
     <div className={`${theme} main`} >
       <div className="navi">
