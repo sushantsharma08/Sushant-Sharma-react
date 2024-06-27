@@ -15,17 +15,17 @@ function App() {
   let theme = "dark"
   return (
     <Box className={`${theme} main`} >
-      <div className="navi">
+      <Box className="navi">
         <Navbar />
 
-      </div>
+      </Box>
 
-      <div className="header">
+      <Box className="header">
 
-        <div className="Hero">
+        <Box className="Hero">
             <Hero />
-        </div>
-        <div className="intro">
+        </Box>
+        <Box className="intro">
             <h1 style={{ lineHeight: "40px", color: "rgb(98, 92, 92)" }}>Hello I am</h1>
             <h1 style={{ lineHeight: "40px", color: "burlywood" }}>
               <Typewriter
@@ -36,8 +36,8 @@ function App() {
                 }}
               />
             </h1>
-          </div>
-      </div>
+          </Box>
+      </Box>
 
 
       <About />

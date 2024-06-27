@@ -32,12 +32,9 @@
 
 .heading{
   font-size: x-large;
-  margin-block: 5rem;
+  margin-bottom: 5rem;
+  line-height: 50px;
 }
-
-
-
-
 
 .highlighted{
   color:rgb(100, 83, 208);
@@ -63,8 +60,8 @@
 .individual_sections {
   position: relative;
   z-index: 6;
-  min-height: 100vh;
-  border: 1px solid red;
+  min-height: 90vh;
+  border: 1px solid rgb(46, 46, 46);
   text-align: center;
   padding: 5rem;
   padding-inline: 3rem;

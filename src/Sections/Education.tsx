@@ -5,11 +5,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-
-import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
@@ -43,7 +41,7 @@ const Education = () => {
         <h1>Educational Qualifications</h1>
       </Box>
 
-      <Box className="content" sx={{ textAlign: "left", paddingTop:"100px"}}>
+      <Box className="content" sx={{ textAlign: "left", }}>
 
         <Accordion sx={{ backgroundColor: "#101214", color: "rgba(255, 255, 255, 0.87)" }}>
           <AccordionSummary
