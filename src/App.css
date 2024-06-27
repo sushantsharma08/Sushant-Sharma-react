@@ -1,10 +1,13 @@
 .dark {
   min-width: 100%;
-  /* z-index: -10; */
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #101214;
+}
+.light{
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fffdfd;
 }
 
 .header {
@@ -31,6 +34,16 @@
   margin-top: 200px;
   margin-left: 200px;
 }
+
+.heading{
+  font-size: x-large;
+  margin-block: 5rem;
+}
+
+
+
+
+
 .highlighted{
   color:rgb(100, 83, 208);
 }
@@ -58,6 +71,8 @@
   min-height: 100vh;
   border: 1px solid red;
   text-align: center;
+  padding: 5rem;
+  padding-inline: 3rem;
   /* background-color: rgba(12, 12, 68, 0.234); */
 }
 

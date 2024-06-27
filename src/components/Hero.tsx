@@ -12,14 +12,14 @@ const Hero = () => {
         <ambientLight intensity={1} />
         <directionalLight
           position={[-5, 5, 5]}
-          color={"rgb(181, 144, 255)"}
+          color={"white"}
           castShadow
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
         <directionalLight
-          position={[5, -5, -5]}
-          color={"magenta"}
+          position={[0, 0, 0]}
+          color={"rgb(181, 144, 255)"}
           castShadow
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}

@@ -95,7 +95,8 @@ export default function Navbar(props: Props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" style={{ backgroundColor: "rgba(100, 100, 100, 0.257)", border: "1px solid rgba(113, 102, 102, 0.257)" }}>
+      {/* <AppBar component="nav" style={{ backgroundColor: "rgba(100, 100, 100, 0.257)", border: "1px solid rgba(113, 102, 102, 0.257)" }}> */}
+      <AppBar component="nav" style={{ backgroundColor: "#262729", border: "1px solid rgba(113, 102, 102, 0.257)" }}>
         <Toolbar>
           <IconButton
             color="inherit"
