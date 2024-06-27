@@ -8,12 +8,13 @@ import Skill from './Sections/Skill.tsx';
 import Contact from './Sections/Contact.tsx';
 import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
+import { Box } from "@mui/material";
 
 function App() {
   // const [theme, useTheme] = useState("dark")
   let theme = "dark"
   return (
-    <div className={`${theme} main`} >
+    <Box className={`${theme} main`} >
       <div className="navi">
         <Navbar />
 
@@ -40,12 +41,12 @@ function App() {
 
 
       <About />
-      <Projects />
       <Education />
       <Skill />
+      <Projects />
       <Contact />
 
-    </div>
+    </Box>
   )
 }
 

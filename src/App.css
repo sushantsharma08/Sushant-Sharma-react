@@ -4,11 +4,6 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #101214;
 }
-.light{
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #fffdfd;
-}
 
 .header {
   min-height: 100vh;
@@ -74,6 +69,25 @@
   padding: 5rem;
   padding-inline: 3rem;
   /* background-color: rgba(12, 12, 68, 0.234); */
+}
+
+li {
+  list-style-type: none;
+}
+#panel1-header{
+  transition: 0.5s ease-in-out;
+  font-size: larger;
+}
+#panel1-header:hover{
+  border: 2px solid rgb(43, 43, 65);
+  padding-inline: 2rem;
+  
+}
+.edu_result{
+  color: rgb(183, 145, 183);
+}
+.institute{
+  color: grey;
 }
 
 @media only screen and (max-width: 600px) {
