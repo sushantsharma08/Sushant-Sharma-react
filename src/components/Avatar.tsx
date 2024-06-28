@@ -33,44 +33,49 @@ type GLTFResult = GLTF & {
 
 export function Avatar(
   //  props: JSX.IntrinsicElements['group']
-  props:any
-   
-   ) {
+  props: any
+
+) {
   const groupRef = useRef<THREE.Group>(null);
   console.log(props);
-  
+
 
   const { nodes, materials } = useGLTF('/models/6677df58c5fe24b037b9cf72.glb') as GLTFResult;
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
   const { animations: greetingAnimation } = useFBX("animations/StandingGreeting.fbx");
-
-  console.log(props);
+  const { animations: greetingSitAnimation } = useFBX("animations/AskingQuestion.fbx");
 
   typingAnimation[0].name = "Typing";
   greetingAnimation[0].name = "Greeting";
+  greetingSitAnimation[0].name = "GreetingSeated";
 
   const { actions: actionTyping } = useAnimations(typingAnimation, groupRef)
   const { actions: actionWaving } = useAnimations(greetingAnimation, groupRef)
+  const { actions: actionWavingSeated } = useAnimations(greetingSitAnimation, groupRef)
 
   useFrame((state) => {
     if (groupRef.current) {
       // groupRef.current.rotation.y += 0.01;
-      // groupRef.current.getObjectByName("Neck")?.lookAt(state.camera.position);
-      const target = new THREE.Vector3(state.pointer.x, state.pointer.y, 0);
-      // groupRef.current.getObjectByName("Spine2")?.lookAt(target);
-      // groupRef.current.getObjectByName("Neck")?.lookAt(target);
+      groupRef.current.getObjectByName("Neck")?.lookAt(state.pointer.x, state.pointer.y - 1.2, 0);
+      // let target = new THREE.Vector3(state.camera.rotation.x,state.camera.rotation.y,state.camera.rotation.z)
+      // const target = new THREE.Vector3(state.pointer.x, state.pointer.y, 1);
+      // groupRef?.current.getObjectByName("Spine2")?.lookAt(target);
+      // groupRef?.current.getObjectByName("Neck")?.lookAt(target);
       // groupRef.current.getObjectByName("*")?.rotateY(90)
+      // console.log(state.camera.rotation._x);
 
     }
   });
 
   useEffect(() => {
-    if (props.anime=="Typing") {
+    if (props.anime == "Typing") {
       actionTyping["Typing"]?.reset().play();
-
     }
-    else{
-    actionWaving["Greeting"]?.reset().play();
+    else if (props.anime == "GreetingSeated") {
+      actionWavingSeated["GreetingSeated"]?.reset().play();
+    }
+    else {
+      actionWaving["Greeting"]?.reset().play();
 
     }
     console.log(actionWaving);
@@ -78,7 +83,7 @@ export function Avatar(
   }, []);
 
   return (
-    <group  /// <reference path="group" />
+    <group
       {...props}
       dispose={null}
       ref={groupRef}
@@ -102,4 +107,4 @@ export function Avatar(
   )
 }
 
-useGLTF.preload('/model/6677df58c5fe24b037b9cf72.glb')
+useGLTF.preload('/models/6677df58c5fe24b037b9cf72.glb')
