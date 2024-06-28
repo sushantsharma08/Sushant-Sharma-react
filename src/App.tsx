@@ -23,7 +23,7 @@ function App() {
       <Box className="header">
 
         <Box className="Hero">
-            <Hero />
+            <Hero Action={"Typing"}/>
         </Box>
         <Box className="intro">
             <h1 style={{ lineHeight: "40px", color: "rgb(98, 92, 92)" }}>Hello I am</h1>
