@@ -87,6 +87,20 @@ li {
 .institute{
   color: grey;
 }
+.template_container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+}
+.template{
+  height: max-content;
+  width: max-content;
+  border: 2px solid blue;
+  margin: 1.2rem;
+  padding: 1.5rem;
+  /* display: flex; */
+}
 
 @media only screen and (max-width: 600px) {
   .header{
