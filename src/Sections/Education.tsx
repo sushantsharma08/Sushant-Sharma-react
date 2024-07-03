@@ -62,26 +62,28 @@ const Education = () => {
 
           <AccordionDetails sx={{ backgroundColor: "#101214", color: "grey" }}>
 
-            <TableContainer component={Paper} >
+            {/* <TableContainer component={Paper} > */}
               <Table sx={{  backgroundColor: "#101214", border: "1px solid grey" }} aria-label="customized table" >
                 <TableHead >
-                  <TableRow sx={{ color: "grey", border:"1px solid grey" }}>
-                    <TableCell sx={{ color: "#8b8b8b" }}><b>Semester</b></TableCell>
-                    <TableCell align="right" sx={{ color: "#8b8b8b" }}><b>SGPA</b></TableCell>
-                    <TableCell align="right" sx={{ color: "#8b8b8b" }}><b>CGPA</b></TableCell>
+                  <TableRow sx={{ color: "grey" }}>
+                    <TableCell sx={{ borderBottom:"1px dotted grey",color: "#8b8b8b" }}><b>Semester</b></TableCell>
+                    <TableCell align="right" sx={{ borderBottom:"1px dotted grey",color: "#8b8b8b" }}><b>SGPA</b></TableCell>
+                    <TableCell align="right" sx={{ borderBottom:"1px dotted grey",color: "#8b8b8b" }}><b>CGPA</b></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {rows.map((row) => (
                     <TableRow key={row.semester} >
-                      <TableCell component="th" scope="row" sx={{ color: "grey" }}>{row.semester}</TableCell>
-                      <TableCell align="right" sx={{ color: "grey" }}>{row.sgpa} </TableCell>
-                      <TableCell align="right" sx={{ color: "grey" }}>{row.cgpa}</TableCell>
+                      <TableCell component="th" scope="row" sx={{ borderBottom:"1px dotted grey",color: "grey" }}>{row.semester}</TableCell>
+                      <TableCell align="right" sx={{ borderBottom:"1px dotted grey",color: "grey" }}>{row.sgpa} </TableCell>
+                      <TableCell align="right" sx={{ borderBottom:"1px dotted grey",color: "grey" }}>{row.cgpa}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
-            </TableContainer>
+            {/* </TableContainer> */}
+
+
 
           </AccordionDetails>
 

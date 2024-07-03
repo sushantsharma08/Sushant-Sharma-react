@@ -10,34 +10,37 @@
   /* border: 1px solid rgb(0, 255, 110); */
   display: flex;
 }
+
 .Hero {
   height: 100vh;
   width: 50%;
 }
-.intro{
+
+.intro {
   /* min-width: 20vw;
   border: 1px solid blue; */
   /* padding-bottom: 200px; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  padding-top:300px ;
+  padding-top: 300px;
   font-size: x-large;
 }
-.fewLines{
+
+.fewLines {
   /* padding-top: 100px; */
   margin-top: 200px;
   margin-left: 200px;
 }
 
-.heading{
+.heading {
   font-size: x-large;
   margin-bottom: 5rem;
   line-height: 50px;
 }
 
-.highlighted{
-  color:rgb(100, 83, 208);
+.highlighted {
+  color: rgb(100, 83, 208);
 }
 
 .main {
@@ -72,47 +75,75 @@
 li {
   list-style-type: none;
 }
-#panel1-header{
+
+#panel1-header {
   transition: 0.5s ease-in-out;
   font-size: larger;
 }
-#panel1-header:hover{
+
+#panel1-header:hover {
   border: 2px solid rgb(43, 43, 65);
   padding-inline: 2rem;
-  
+
 }
-.edu_result{
+
+.edu_result {
   color: rgb(183, 145, 183);
 }
-.institute{
+
+.institute {
   color: grey;
 }
-.template_container{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-items: center;
+
+.template_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-inline: auto;
 }
-.template{
+
+.template {
   height: max-content;
   width: max-content;
   border: 2px solid blue;
   margin: 1.2rem;
   padding: 1.5rem;
   /* display: flex; */
+  min-width: 500px;
+  height: 250px;
+
+}
+.main_hr{
+  margin-block: 10px;
+}
+.template_content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  /* margin-top: 1rem; */
+}
+
+.front {
+  /* margin-bottom: 0.2rem; */
+  padding: 0, 30px;
+  white-space: nowrap;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {
-  .header{
-    flex-direction:column-reverse;
+  .header {
+    flex-direction: column-reverse;
 
   }
-  .Hero{
+
+  .Hero {
     width: 100%;
     /* border: 1px solid red; */
 
   }
-  .intro{
+
+  .intro {
     padding-top: 2rem;
     font-size: medium;
     margin-left: 6rem;

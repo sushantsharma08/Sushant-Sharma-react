@@ -8,24 +8,29 @@ import Skill from './Sections/Skill.tsx';
 import Contact from './Sections/Contact.tsx';
 import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
-import { Box } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
+import Footer from "./components/Footer.tsx";
+
 
 function App() {
   // const [theme, useTheme] = useState("dark")
   let theme = "dark"
   return (
-    <Box className={`${theme} main`} >
-      <Box className="navi">
-        <Navbar />
+    // <ThemeProvider theme={theme}>
 
-      </Box>
 
-      <Box className="header">
+      <Box className={`${theme} main`} >
+        <Box className="navi">
+          <Navbar />
 
-        <Box className="Hero">
-            <Hero Action={"Typing"}/>
         </Box>
-        <Box className="intro">
+
+        <Box className="header">
+
+          <Box className="Hero">
+            <Hero Action={"Typing"} />
+          </Box>
+          <Box className="intro">
             <h1 style={{ lineHeight: "40px", color: "rgb(98, 92, 92)" }}>Hello I am</h1>
             <h1 style={{ lineHeight: "40px", color: "burlywood" }}>
               <Typewriter
@@ -37,16 +42,16 @@ function App() {
               />
             </h1>
           </Box>
+        </Box>
+
+        <About />
+        <Education />
+        <Skill />
+        <Projects />
+        <Contact />
+        <Footer/>
       </Box>
-
-
-      <About />
-      <Education />
-      <Skill />
-      <Projects />
-      <Contact />
-
-    </Box>
+    // </ThemeProvider>
   )
 }
 
