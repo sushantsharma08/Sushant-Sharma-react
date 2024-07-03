@@ -27,12 +27,6 @@
   font-size: x-large;
 }
 
-.fewLines {
-  /* padding-top: 100px; */
-  margin-top: 200px;
-  margin-left: 200px;
-}
-
 .heading {
   font-size: x-large;
   margin-bottom: 5rem;
@@ -40,8 +34,9 @@
 }
 
 .highlighted_about {
-  color: rgb(54, 81, 130);
-font-size: larger;
+  /* color: rgb(54, 81, 130); */
+  color: #4c3d52;
+  font-size: larger;
 }
 
 h1 {
@@ -205,7 +200,7 @@ li {
     width: 99%;
   }
 
-  .back{
+  .back {
     display: none;
   }
 }
