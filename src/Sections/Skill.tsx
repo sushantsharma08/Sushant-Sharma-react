@@ -41,7 +41,7 @@ const Skill = () => {
             </div>
             <hr className="main_hr" />
             <div className=" ">
-              <div className=" languages text-center">
+              <div className=" languages text-center" style={{color:"rgb(111, 56, 16)"}}>
                 Web Development
               </div>
 
