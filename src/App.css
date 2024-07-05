@@ -150,8 +150,9 @@ li {
 
 .main_hr {
   margin-block: 10px;
+  /* outline: none; */
+  border:1px dotted rgb(95, 55, 9);
   outline: none;
-  border-color: rgb(185, 129, 64);
 }
 
 
@@ -174,6 +175,50 @@ li {
   white-space: nowrap;
   font-weight: 600;
   color: rgb(82, 82, 82)
+}
+
+/* projects */
+.project_template {
+  height: max-content;
+  width: max-content;
+  border: 2px solid rgba(63, 86, 110, 0.401);
+  margin: 1.2rem;
+  /* padding: 1.5rem; */
+  /* display: flex; */
+  min-width: 375px;
+  height: 250px;
+}
+
+.project_glass:hover {
+  margin-inline: 3rem;
+  background: linear-gradient(135deg, #3f324422, rgba(51, 53, 121, 0.003));
+}
+
+.project_glass {
+  background: linear-gradient(135deg, #60495a3c, rgba(106, 74, 92, 0.042));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s ease-in-out;
+}
+
+.project_sub_Heading{
+color: #3e3e3e;
+font-size: xx-large;
+font-weight: 800;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.project_template_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.project_img{
+  color:"#60495A";
+  /* background-color: white; */
 }
 
 @media only screen and (max-width: 600px) {
