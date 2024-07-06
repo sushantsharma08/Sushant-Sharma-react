@@ -1,5 +1,4 @@
 import { Box } from "@mui/material"
-import blob from "/assets/blob.gif"
 
 const Projects = () => {
   return (
