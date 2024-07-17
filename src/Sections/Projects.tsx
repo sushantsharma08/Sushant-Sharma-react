@@ -12,19 +12,24 @@ const Projects = () => {
 
       <Box>
 
-        <div className="template_container " style={{ height: "90vh" }} >
+        <div className="template_container "  >
 
-          <div className="project_template project_glass">
-            <div className="template_header">
-              <div className="">
-              </div>
-              {/* <span className=" project_sub_Heading">E-Money-Lender</span> */}
-            </div>
-            {/* <hr className="main_hr" /> */}
-            <div className="project_template_content ">
+          <div className="project_template project_glass   ">
+
+            <div className="project_template_content project_template_front">
 
               <img src="/assets/logo.png" width="300px" className="project_img" />
             </div>
+
+            {/* <div className="project_template_content project_template_back">
+
+              <div className="template_header">
+                <span className=" project_sub_Heading">E-Money-Lender</span>
+                <hr className="main_hr" />
+                <h1>Hetddfddj</h1>
+
+              </div>
+            </div> */}
           </div>
 
           <div className="project_template project_glass">
