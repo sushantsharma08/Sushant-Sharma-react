@@ -114,6 +114,7 @@ li {
   justify-content: space-evenly;
   align-items: center;
   margin-inline: auto;
+  padding-top: 10rem;
 }
 
 .template {

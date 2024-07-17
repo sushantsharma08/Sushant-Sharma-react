@@ -10,7 +10,7 @@ const Projects = () => {
       </Box>
 
 
-      <Box>
+      {/* <Box> */}
 
         <div className="template_container "  >
 
@@ -65,7 +65,7 @@ const Projects = () => {
             </div>
           </div>
         </div >
-      </Box>
+      {/* </Box> */}
     </div>
 
   )
