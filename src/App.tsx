@@ -5,7 +5,7 @@ import About from './Sections/About.tsx';
 import Education from './Sections/Education.tsx';
 import Projects from './Sections/Projects.tsx';
 import Skill from './Sections/Skill.tsx';
-import Contact from './Sections/Contact.tsx';
+// import Contact from './Sections/Contact.tsx';
 import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";

@@ -76,9 +76,9 @@ h1 {
   /* background-color: rgba(12, 12, 68, 0.234); */
 }
 
-.content {
+/* .content { */
   /* padding-top: 7rem; */
-}
+/* } */
 
 li {
   list-style-type: none;
@@ -117,10 +117,10 @@ li {
   padding-top: 10rem;
 
 }
-.projects_container{
+/* .projects_container{ */
 
   /* flex-direction: column; */
-}
+/* } */
 .template {
   height: max-content;
   width: max-content;
