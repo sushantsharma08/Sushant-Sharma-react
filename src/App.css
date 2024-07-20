@@ -77,7 +77,7 @@ h1 {
 }
 
 .content {
-  padding-top: 7rem;
+  /* padding-top: 7rem; */
 }
 
 li {
@@ -192,11 +192,11 @@ li {
 
 .project_glass:hover {
   /* margin-inline: 3rem; */
-  background: linear-gradient(135deg, #3f324422, rgba(51, 53, 121, 0.003));
+  /* background: linear-gradient(135deg, #3f324422, rgba(51, 53, 121, 0.003)); */
 }
 
 .project_glass {
-  background: linear-gradient(135deg, #4d3c3147, rgba(106, 74, 92, 0.042));
+  background: linear-gradient(135deg, #4c3d5249, rgba(106, 74, 92, 0.042));
   /* background: linear-gradient(135deg, #60495a3c, rgba(106, 74, 92, 0.042)); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
