@@ -49,7 +49,7 @@ function App() {
         <Education />
         <Skill />
         <Projects />
-        <Contact />
+        {/* <Contact /> */}
         <Footer/>
       </Box>
     // </ThemeProvider>
