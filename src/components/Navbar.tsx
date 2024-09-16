@@ -1,33 +1,3 @@
-
-// const Navbar = () => {
-
-//   const ScrollToSelection = (elementId: any) => {
-//     document.getElementById(`${elementId.Item}`)?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-//   }
-
-//   const Navitems = ["About", "Educational Qualifications", "Skills", "Projects", "Contact Me"]
-
-//   return (
-//     <div className='navbar'>
-//       {/* <nav> */}
-//         {
-//           Navitems.map((Item) =>
-//             <span className="navbar_item" onClick={() => ScrollToSelection({ Item })}>
-//                {Item}
-//             </span>
-//           )
-//         }
-//       {/* </nav> */}
-//     </div>
-
-//   )
-// }
-
-
-
-
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -46,10 +16,6 @@ import Button from '@mui/material/Button';
 
 
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
@@ -61,7 +27,9 @@ const ScrollToSelection = (elementId: any) => {
 
 const drawerWidth = 240;
 
-const navItems = ["About", "Educational Qualifications", "Skills", "Projects", "Contact Me"]
+const navItems = ["About", "Educational Qualifications", "Skills", "Projects",
+//  "Contact Me"
+]
 
 
 export default function Navbar(props: Props) {
