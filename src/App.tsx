@@ -19,39 +19,39 @@ function App() {
     // <ThemeProvider theme={theme}>
 
 
-      <Box className={`${theme} main`} >
-        <Box className="navi">
-          <Navbar />
+    <Box className={` main`} >
+      <Box className="navi">
+        <Navbar />
 
-        </Box>
-
-        <Box className="header">
-
-          <Box className="Hero">
-            <Hero Action={"Typing"} />
-          </Box>
-          <Box className="intro">
-            <h1 style={{ lineHeight: "40px", color: "rgb(98, 92, 92)" }}>Hello I am</h1>
-            <h1 style={{ lineHeight: "40px", color: "burlywood" }}>
-              <Typewriter
-                options={{
-                  strings: ['Sushant Sharma', 'an Engineer', 'A Developer'],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </h1>
-          </Box>
-          
-        </Box>
-
-        <About />
-        <Education />
-        <Skill />
-        <Projects />
-        {/* <Contact /> */}
-        <Footer/>
       </Box>
+
+      <Box className="header">
+
+        <Box className="Hero">
+          <Hero Action={"Typing"} />
+        </Box>
+        <Box className="intro">
+          <h1 style={{ lineHeight: "40px", color: "rgb(98, 92, 92)" }}>Hello I am</h1>
+          <h1 style={{ lineHeight: "40px", color: "burlywood" }}>
+            <Typewriter
+              options={{
+                strings: ['Sushant Sharma', 'an Engineer', 'A Developer'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h1>
+        </Box>
+
+      </Box>
+
+      <About />
+      <Education />
+      <Skill />
+      <Projects />
+      {/* <Contact /> */}
+      <Footer />
+    </Box>
     // </ThemeProvider>
   )
 }
