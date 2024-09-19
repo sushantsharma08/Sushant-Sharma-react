@@ -14,7 +14,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
   // const [theme, useTheme] = useState("dark")
-  let theme = "dark"
+  // let theme = "dark"
   return (
     // <ThemeProvider theme={theme}>
 
