@@ -9,7 +9,7 @@ const Exp = (props: any) => {
     const canvasRef = useRef<THREE.Group>(null);
 
     useFrame((state) => {
-        if (canvasRef.current) {
+        if (canvasRef.current && window.innerWidth > 1000) {
             canvasRef.current.rotation.y = state.pointer.y*0.3;
             canvasRef.current.rotation.x = state.pointer.x*0.3;
 

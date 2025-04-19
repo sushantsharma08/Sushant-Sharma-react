@@ -63,7 +63,15 @@ h1 {
   -webkit-text-size-adjust: 100%;
 }
 
-
+/* experience */
+.timeline_heading {
+  font-size: x-large;
+  font-weight: 500;
+}
+.timeline_company{
+  font-size: large;
+  color:#dda991;
+}
 
 .individual_sections {
   position: relative;
@@ -78,7 +86,7 @@ h1 {
 }
 
 /* .content { */
-  /* padding-top: 7rem; */
+/* padding-top: 7rem; */
 /* } */
 
 li {
@@ -118,9 +126,10 @@ li {
   padding-top: 10rem;
 
 }
+
 /* .projects_container{ */
 
-  /* flex-direction: column; */
+/* flex-direction: column; */
 /* } */
 .template {
   height: max-content;
@@ -184,7 +193,7 @@ li {
   font-weight: 600;
   color: rgb(82, 82, 82);
   background: #dda991;
-  
+
 }
 
 /* projects */

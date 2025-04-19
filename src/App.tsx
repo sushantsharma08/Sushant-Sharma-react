@@ -8,6 +8,7 @@ import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";
 import Footer from "./components/Footer.tsx";
+import Experience from "./Sections/Experience.tsx";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       </Box>
 
       <About />
+      <Experience/>
       <Education  />
       <Skill />
       <Footer />
