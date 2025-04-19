@@ -199,7 +199,14 @@ export default function Terminal() {
             </Box>
             {logs.map((log, idx) => (
                 <Box key={idx} sx={{ mb: 1 }}>
-                    <Typography component="div" sx={{ whiteSpace: 'pre-wrap', color: "#dda991", fontFamily: '"JetBrains Mono", monospace', fontSize: { xs: '0.9rem', sm: '1rem' }, }}>
+                    <Typography component="div" sx={{
+                        whiteSpace: 'pre-wrap',
+                        wordBreak: 'break-word', // ⬅️ Ensures long words or URLs wrap
+                        overflowWrap: 'break-word',
+                        color: "#dda991",
+                        fontFamily: '"JetBrains Mono", monospace',
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
+                    }}>
                         <span style={{ color: '#2c4b2c' }}>{`> ${log.command}`}</span>
                         <br />
                         {log.output}
