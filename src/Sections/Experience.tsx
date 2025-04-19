@@ -11,7 +11,7 @@ export default function OutlinedTimeline() {
     return (
         // <div className={`individual_sections`} id="About">
 
-            <Timeline position="alternate" sx={{mb:30}}>
+            <Timeline position="alternate" sx={{mb:30}} id="Experience">
                 <Box className="heading " >
                     <Typography variant="h3" sx={{ color: "#434343", fontWeight: "bold", textAlign: "center" }}>Experience</Typography>
                 </Box>

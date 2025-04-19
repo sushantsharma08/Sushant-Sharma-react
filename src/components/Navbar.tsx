@@ -27,7 +27,7 @@ const ScrollToSelection = (elementId: any) => {
 
 const drawerWidth = 240;
 
-const navItems = ["About", "Educational Qualifications", "Skills", "Projects",
+const navItems = ["About","Experience" ,"Educational Qualifications", "Skills",
 //  "Contact Me"
 ]
 
