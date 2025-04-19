@@ -10,6 +10,7 @@ import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";
 import Footer from "./components/Footer.tsx";
+import zIndex from "@mui/material/styles/zIndex";
 
 
 function App() {
@@ -46,9 +47,9 @@ function App() {
       </Box>
 
       <About />
-      <Education />
+      <Education  />
       <Skill />
-      <Projects />
+      {/* <Projects /> */}
       {/* <Contact /> */}
       <Footer />
     </Box>

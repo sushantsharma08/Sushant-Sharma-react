@@ -34,7 +34,7 @@ const rows = [
 
 const Education = () => {
   return (
-    <Box className={`individual_sections`} id='Educational Qualifications' >
+    <Box sx={{zindex:"10"}} className={`individual_sections`} id='Educational Qualifications' >
       <Box className="heading">
         <h1>Educational Qualifications</h1>
       </Box>

@@ -126,11 +126,13 @@ li {
   height: max-content;
   width: max-content;
   border: 2px solid rgba(63, 86, 110, 0.401);
-  margin: 1.2rem;
+  /* margin: 1.2rem; */
   padding: 1.5rem;
   /* display: flex; */
-  min-width: 375px;
+  min-width: 350px;
   height: 250px;
+  margin-block: 40px;
+  text-align: center;
 }
 
 .glass:hover {
@@ -180,7 +182,9 @@ li {
   padding-block: 10px;
   white-space: nowrap;
   font-weight: 600;
-  color: rgb(82, 82, 82)
+  color: rgb(82, 82, 82);
+  background: #dda991;
+  
 }
 
 /* projects */
