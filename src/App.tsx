@@ -3,22 +3,15 @@ import Navbar from "./components/Navbar.tsx";
 import './App.css'
 import About from './Sections/About.tsx';
 import Education from './Sections/Education.tsx';
-import Projects from './Sections/Projects.tsx';
 import Skill from './Sections/Skill.tsx';
-// import Contact from './Sections/Contact.tsx';
 import Hero from './components/Hero.tsx';
 import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";
 import Footer from "./components/Footer.tsx";
-import zIndex from "@mui/material/styles/zIndex";
 
 
 function App() {
-  // const [theme, useTheme] = useState("dark")
-  // let theme = "dark"
   return (
-    // <ThemeProvider theme={theme}>
-
 
     <Box className={` main`} >
       <Box className="navi">
@@ -49,11 +42,8 @@ function App() {
       <About />
       <Education  />
       <Skill />
-      {/* <Projects /> */}
-      {/* <Contact /> */}
       <Footer />
     </Box>
-    // </ThemeProvider>
   )
 }
 
