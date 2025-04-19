@@ -28,63 +28,40 @@ export default function Terminal() {
         hello: () => `Hello ${terminalUser}, I hope you are having a good time scrolling. `,
         help: () => { return `Available commands: ${Object.keys(commandMap).map(el => { return el })}` },
         // reset: () => "Welcome to the Terminal...\n Firstly switch user with 'su' command \n type 'help' to know more commands.",
-        skills: () => `
-        +---------------------------------------------+
-        |                  Frontend                   |
-        +---------------------------------------------+
-        | - JavaScript                                |
-        | - Angular 12/13                             |
-        | - React (TSX)                               |
-        | - Bootstrap, Tailwind CSS, NG Zorro         |
-        | - MUI, Three.js, Responsive Design          |
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |                   Backend                   |
-        +---------------------------------------------+
-        | - Node.js                                   |
-        | - Express.js                                |
-        | - WebSockets (Socket.IO)                    |
-        | - Asynchronous Programming                  | 
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |               Authentication                |
-        +---------------------------------------------+
-        | - JWT                                       |
-        | - Cookies                                   |
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |             State Management                |
-        +---------------------------------------------+
-        | - React Query                               |
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |               Cloud / DevOps                |
-        +---------------------------------------------+
-        | - Firebase                                  |
-        | - Vercel                                    |
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |                   Tools                     |
-        +---------------------------------------------+
-        | - GitHub                                    |
-        | - Vite                                      |
-        | - Postman                                   |
-        | - VSCode                                    |
-        +---------------------------------------------+
-        
-        +---------------------------------------------+
-        |             Microcontrollers                |
-        +---------------------------------------------+
-        | - Arduino                                   |
-        | - ESP32                                     |
-        +---------------------------------------------+
-        
-            `,
+        skills: () =>`Frontend
+        - JavaScript
+        - Angular 12/13
+        - React (TSX)
+        - Bootstrap, Tailwind CSS, NG Zorro
+        - MUI, Three.js, Responsive Design
+      
+      Backend
+        - Node.js
+        - Express.js
+        - WebSockets (Socket.IO)
+        - Asynchronous Programming
+      
+      Authentication
+        - JWT
+        - Cookies
+      
+      State Management
+        - React Query
+      
+      Cloud / DevOps
+        - Firebase
+        - Vercel
+      
+      Tools
+        - GitHub
+        - Vite
+        - Postman
+        - VSCode
+      
+      Microcontrollers
+        - Arduino
+        - ESP32
+      `,
         su: () => `Usage: su <username>`,
         whois: () => `Missed 'about me' section?`,
         // history:()=>{
