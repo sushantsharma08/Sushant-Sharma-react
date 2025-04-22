@@ -53,7 +53,7 @@ export default function OutlinedTimeline() {
 
                 <TimelineItem>
                     <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="secondary" />
+                        <TimelineDot variant="outlined" color="warning" />
                         <TimelineConnector sx={{ height: 100 }} />
 
                     </TimelineSeparator>
