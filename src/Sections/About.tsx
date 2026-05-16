@@ -1,41 +1,73 @@
+import { JoinFullSharp } from "@mui/icons-material"
 import { Box, Typography } from "@mui/material"
 
 
 const About = () => {
   return (
     <div className={`individual_sections`} id="About">
-      <div className="heading">
+      {/* <div className="heading">
         <h1 >About Me</h1>
-      </div>
+      </div> */}
 
-      <Box className="content" >
-        <Typography
-          variant="body1"
-          sx={{
-            // fontFamily: '"JetBrains Mono", monospace',
-            // fontFamily: '"Manrope", sans-serif',
-            fontSize: { xs: '1rem', md: '1.3rem' },
-            lineHeight: 1.7,
-            color: '#ccc',
-            whiteSpace: 'pre-line',
-            letterSpacing: { xs: 'inherit', md: 1.5 },
-          }}
-        >
-          A <b className="highlighted_about">Software Engineer</b>, tech enthusiast, and fitness geek <br />
-          who loves to explore and learn during free time.
-          <br /><br />
-          I specialize in JavaScript and its frameworks to build end-to-end web projects,
-          integrated <br /> with databases and deployed using cloud platforms like Vercel and GitHub.
-          <br /><br />
-          My goal is to make a meaningful impact in software engineering—<br />
-          by delivering exceptional software solutions and supporting the growth <br />
-          of the people I collaborate with.
-          <br />
-          <br />
-          I’m seeking a work environment where performance is rewarded with <br />
-          greater responsibility and opportunities to grow both technically and personally.
+      <Box
+      // className="content"
+      >
+        <Typography>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              textAlign: "center",
+              p: 2
+            }}
+          >
+            {[
+              { top: "5+", bottom: "Projects Delivered" },
+              { top: "Multiple", bottom: "Domains" },
+              { top: "1.5+ Yrs", bottom: "Experience" }
+            ].map((item, i) => (
+              <Box key={i}>
+
+                {/* 🔥 Top Highlight Text */}
+                <Box
+                  sx={{
+                    fontSize: { xs: "1.8rem", md: "2.5rem" },
+                    fontWeight: 700,
+                    background: "linear-gradient(90deg, #a855f7, #3b82f6, #ec4899)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent"
+                  }}
+                >
+                  {item.top}
+                </Box>
+
+                {/* ✨ Smooth Divider */}
+                <hr
+                  style={{
+                    border: "none",
+                    height: "2px",
+                    background:
+                      "linear-gradient(to right, transparent, rgba(168,85,247,0.6), transparent)",
+                    margin: "6px 0"
+                  }}
+                />
+
+                {/* 💡 Subtle Bottom Text */}
+                <Box
+                  sx={{
+                    fontSize: "0.9rem",
+                    color: "rgba(253, 221, 201, 0.83)",
+                    letterSpacing: "0.5px"
+                  }}
+                >
+                  {item.bottom}
+                </Box>
+
+              </Box>
+            ))}
+          </Box>
         </Typography>
-
       </Box>
 
     </div>
