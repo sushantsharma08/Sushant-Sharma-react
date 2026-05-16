@@ -1,4 +1,4 @@
-import "./loadingmodel.css"
+import "./LoadingModel.css"
 
 const LoadingModel = () => {
     return (
