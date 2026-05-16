@@ -1,5 +1,4 @@
 // import Hero from "../components/Hero"
-import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import SkillsTree from '../components/SkillCards'
 

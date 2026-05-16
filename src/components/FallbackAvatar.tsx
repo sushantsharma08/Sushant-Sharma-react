@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Skeleton, SxProps, Theme, Typography } from "@mui/material";
+import { Box, Skeleton, SxProps, Theme } from "@mui/material";
 
 type UserSkeletonProps = {
   sx?: SxProps<Theme>;

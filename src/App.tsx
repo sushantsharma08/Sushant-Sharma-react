@@ -10,7 +10,6 @@ import Typewriter from 'typewriter-effect';
 import { Box } from "@mui/material";
 import Footer from "./components/Footer.tsx";
 import Experience from "./Sections/Experience.tsx";
-import UserSkeleton from "./components/FallbackAvatar.tsx";
 import Projects from "./Sections/Projects.tsx";
 import LoadingModel from "./components/LoadingModel.tsx";
 
@@ -26,8 +25,6 @@ function App() {
         <Suspense
           fallback={
             <div className="Hero" style={{ paddingTop: "300px" }}>
-              {/* <UserSkeleton />
-               */}
                <LoadingModel/>
             </div>
           }>

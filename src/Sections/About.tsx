@@ -1,4 +1,3 @@
-import { JoinFullSharp } from "@mui/icons-material"
 import { Box, Typography } from "@mui/material"
 
 

@@ -1,6 +1,4 @@
 import { Box } from "@mui/material"
-
-import LaserFlow from '../components/ProjectsLayout';
 import { useRef } from 'react';
 
 

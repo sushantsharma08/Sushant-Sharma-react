@@ -264,7 +264,6 @@ void main(){
 
 export const LaserFlow: React.FC<Props> = ({
   className,
-  sx,
   style,
   wispDensity = 1,
   dpr,
