@@ -1,25 +1,17 @@
-// import Hero from "../components/Hero"
-import Box from '@mui/material/Box'
-import SkillsTree from '../components/SkillCards'
-
-
+import SkillsTree from "../components/SkillCards";
+import SectionPanel from "../components/SectionPanel";
 
 const Skill = () => {
-
   return (
-    <Box
-      className={`individual_sections`}
+    <SectionPanel
       id="Skills"
-      style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
-      sx={{
-        mb: { xs: '900px', sm: 0 }
-      }}
+      variant="skills"
+      heading="Technologies"
+      lead="Technologies and tools I work with day to day."
     >
-      
       <SkillsTree />
+    </SectionPanel>
+  );
+};
 
-    </Box>
-  )
-}
-
-export default Skill
+export default Skill;

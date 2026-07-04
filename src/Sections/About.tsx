@@ -1,76 +1,41 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material";
+import SectionPanel from "../components/SectionPanel";
 
+const stats = [
+  { value: "5+", label: "Projects Delivered", accent: "#fda4af" },
+  { value: "Multiple", label: "Domains", accent: "#5eead4" },
+  { value: "~ 2 Yrs", label: "Experience", accent: "#f5c842" },
+];
 
 const About = () => {
   return (
-    <div className={`individual_sections`} id="About">
-      {/* <div className="heading">
-        <h1 >About Me</h1>
-      </div> */}
-
+    <SectionPanel
+      id="About"
+      variant="about"
+      heading="Overview"
+      lead="A quick snapshot of what I've been building."
+      
+    >
       <Box
-      // className="content"
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: { xs: 2, sm: 3, md: 4 },
+        }}
       >
-        <Typography>
-
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              textAlign: "center",
-              p: 2
-            }}
-          >
-            {[
-              { top: "5+", bottom: "Projects Delivered" },
-              { top: "Multiple", bottom: "Domains" },
-              { top: "1.5+ Yrs", bottom: "Experience" }
-            ].map((item, i) => (
-              <Box key={i}>
-
-                {/* 🔥 Top Highlight Text */}
-                <Box
-                  sx={{
-                    fontSize: { xs: "1.8rem", md: "2.5rem" },
-                    fontWeight: 700,
-                    background: "linear-gradient(90deg, #a855f7, #3b82f6, #ec4899)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent"
-                  }}
-                >
-                  {item.top}
-                </Box>
-
-                {/* ✨ Smooth Divider */}
-                <hr
-                  style={{
-                    border: "none",
-                    height: "2px",
-                    background:
-                      "linear-gradient(to right, transparent, rgba(168,85,247,0.6), transparent)",
-                    margin: "6px 0"
-                  }}
-                />
-
-                {/* 💡 Subtle Bottom Text */}
-                <Box
-                  sx={{
-                    fontSize: "0.9rem",
-                    color: "rgba(253, 221, 201, 0.83)",
-                    letterSpacing: "0.5px"
-                  }}
-                >
-                  {item.bottom}
-                </Box>
-
-              </Box>
-            ))}
+        {stats.map((item) => (
+          <Box key={item.label} className="about_stat_card">
+            <Typography className="about_stat_value" sx={{ color: item.accent }}>
+              {item.value}
+            </Typography>
+            <Box className="about_stat_divider" sx={{ background: item.accent }} />
+            <Typography className="about_stat_label">{item.label}</Typography>
           </Box>
-        </Typography>
+        ))}
       </Box>
+    </SectionPanel>
+  );
+};
 
-    </div>
-  )
-}
-
-export default About
+export default About;

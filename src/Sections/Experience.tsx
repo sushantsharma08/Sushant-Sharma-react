@@ -1,196 +1,89 @@
 
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import { Box, Typography } from '@mui/material';
-import DotGrid from '../components/DotBackground';
+import { Box, Typography } from "@mui/material";
+import SectionPanel from "../components/SectionPanel";
 
-export default function OutlinedTimeline() {
-    return (
-        <div className={`individual_sections`} style={{ position: "relative", minHeight: "600px",overflow:"hidden" }}>
+const experiences = [
+  {
+    role: "System Engineer",
+    company: "Tata Consultancy Services (TCS)",
+    period: "Feb 2025 – Present",
+    year: "2025",
+    accent: "#f5c842",
+    current: true,
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "Amantya Technologies",
+    period: "Jun – Aug 2024",
+    year: "2024",
+    accent: "#5eead4",
+    current: false,
+  },
+];
 
+export default function Experience() {
+  return (
+    <SectionPanel
+      id="Experience"
+      variant="experience"
+      heading="Experience"
+      lead="My professional journey — most recent first."
+      contentClassName="experience_section"
+    >
+      <Box className="exp-timeline" component="ol">
+        <Box className="exp-spine" aria-hidden="true">
+          <Box className="exp-spine-line" />
+          <Box className="exp-spine-pulse" />
+        </Box>
 
-            <div style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 0,
-                opacity: 0.7,
-            }}>
+        {experiences.map((job, index) => {
+          const side = index % 2 === 0 ? "left" : "right";
+          const isLast = index === experiences.length - 1;
 
-                <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-                    <DotGrid
-                        dotSize={5}
-                        gap={15}
-                        baseColor="#271E37"
-                        activeColor="#5227FF"
-                        proximity={120}
-                        shockRadius={250}
-                        shockStrength={5}
-                        resistance={750}
-                        returnDuration={1.5}
-                    />
-                </div>
-            </div>
-
-
-
-            <Timeline position="alternate"
-                sx={{ mb: 30, position: "relative", zIndex: 1 }}
-                id="Experience">
-                <Box className="heading " >
-                    <Typography variant="h3" sx={{ color: "#434343", fontWeight: "bold", textAlign: "center", paddingBottom: "80px" }}>Experience</Typography>
+          return (
+            <Box
+              key={job.role}
+              component="li"
+              className={`exp-item exp-item--${side}${job.current ? " exp-item--current" : ""}${isLast ? " exp-item--last" : ""}`}
+            >
+              <Box className="exp-card-col">
+                <Box
+                  className="exp-card"
+                  sx={{
+                    "--exp-accent": job.accent,
+                    borderColor: `${job.accent}44`,
+                  }}
+                >
+                  {job.current && <span className="exp-badge">Current</span>}
+                  <Typography className="exp-period" sx={{ color: job.accent }}>
+                    {job.period}
+                  </Typography>
+                  <Typography className="exp-role">{job.role}</Typography>
+                  <Typography className="exp-company">{job.company}</Typography>
                 </Box>
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot variant="outlined" />
-                        <TimelineConnector />
-                        <TimelineConnector />
+              </Box>
 
-                    </TimelineSeparator>
-                    <TimelineContent>
+              <Box className="exp-axis" aria-hidden="true">
+                <Box className={`exp-connector exp-connector--${side}`} />
+                <Box
+                  className={`exp-dot${job.current ? " exp-dot--live" : ""}`}
+                  sx={{
+                    borderColor: job.accent,
+                    boxShadow: `0 0 0 4px ${job.accent}22, 0 0 18px ${job.accent}66`,
+                  }}
+                >
+                  <Box className="exp-dot-core" sx={{ background: job.accent }} />
+                </Box>
+                <Typography className="exp-year" sx={{ color: job.accent }}>
+                  {job.year}
+                </Typography>
+              </Box>
 
-                    </TimelineContent>
-                </TimelineItem>
-
-
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="primary" />
-                        <TimelineConnector sx={{ height: 100 }} />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <Box
-                            onMouseMove={(e: any) => {
-                                const rect = e.currentTarget.getBoundingClientRect();
-                                const x = e.clientX - rect.left;
-                                const y = e.clientY - rect.top;
-
-                                const rotateX = (y / rect.height - 0.5) * -10;
-                                const rotateY = (x / rect.width - 0.5) * 10;
-
-                                e.currentTarget.style.transform =
-                                    `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                            }}
-                            onMouseLeave={(e: any) => {
-                                e.currentTarget.style.transform =
-                                    "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-                            }}
-
-                            sx={{
-                                backdropFilter: "blur(12px)",
-                                WebkitBackdropFilter: "blur(12px)",
-
-                                background: "rgba(0, 255, 255, 0.03)",
-                                border: "1px solid rgba(255,255,255,0.12)",
-
-                                borderRadius: "16px",
-                                padding: "16px 20px",
-
-                                // depth
-                                boxShadow: `0 8px 32px rgba(0,0,0,0.25),
-                                inset 0 1px 0 rgba(255,255,255,0.1)`,
-
-                                // 3D feel
-                                transform: "perspective(1000px) translateZ(0)",
-                                transition: "all 0.3s ease",
-
-                                // spacing
-                                display: "inline-block",
-                                maxWidth: "400px",
-                            }}
-                        >
-                            <span style={{ textAlign: "left" }}>
-                                <b className='timeline_heading' style={{ color: "rgb(54, 81, 130)" }} >Software Engineer Intern</b> <br />
-                                <span>
-
-                                    <Typography sx={{
-                                        color: "#5c4d84", fontSize: 17, textAlign: "end",
-                                    }}>
-                                        | Amantya Technologies
-                                    </Typography>
-                                    | Jun - Aug 2024</span>
-                            </span>
-                        </Box>
-
-                    </TimelineContent>
-                </TimelineItem>
-
-
-
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="warning" />
-                        <TimelineConnector sx={{ height: 100 }} />
-
-                    </TimelineSeparator>
-
-                    <TimelineContent>
-                        <Box
-                            onMouseMove={(e: any) => {
-                                const rect = e.currentTarget.getBoundingClientRect();
-                                const x = e.clientX - rect.left;
-                                const y = e.clientY - rect.top;
-
-                                const rotateX = (y / rect.height - 0.5) * -10;
-                                const rotateY = (x / rect.width - 0.5) * 10;
-
-                                e.currentTarget.style.transform =
-                                    `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                            }}
-                            onMouseLeave={(e: any) => {
-                                e.currentTarget.style.transform =
-                                    "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-                            }}
-
-                            sx={{
-                                backdropFilter: "blur(12px)",
-                                WebkitBackdropFilter: "blur(12px)",
-
-                                background: "rgba(255, 198, 128, 0.03)",
-                                border: "1px solid rgba(255,255,255,0.12)",
-
-                                borderRadius: "16px",
-                                padding: "16px 20px",
-
-                                // depth
-                                boxShadow: `0 8px 32px rgba(0,0,0,0.25),
-                                inset 0 1px 0 rgba(255,255,255,0.1)`,
-
-                                // 3D feel
-                                transform: "perspective(1000px) translateZ(0)",
-                                transition: "all 0.3s ease",
-
-                                // spacing
-                                display: "inline-block",
-                                maxWidth: "400px",
-                            }}
-                        >
-                            <b className='timeline_heading' style={{
-                                // color: "#c28017"
-                                color: "#773131",
-                            }}>
-                                System Engineer
-                            </b>
-                            <span> <br />
-                                <Typography sx={{
-                                    // color: "#824141", 
-                                    color: "#906829",
-                                    fontSize: 17, textAlign: "start",
-                                }}>
-                                    | Tata Consultancy Services (TCS)
-                                </Typography>
-                                |  Feb 2025 – Present</span>
-
-
-                        </Box>
-
-                    </TimelineContent>
-                </TimelineItem>
-
-            </Timeline>
-        </div>
-    );
+              <Box className="exp-spacer" aria-hidden="true" />
+            </Box>
+          );
+        })}
+      </Box>
+    </SectionPanel>
+  );
 }

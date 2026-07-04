@@ -18,18 +18,19 @@ interface Props {
   window?: () => Window;
 }
 
-const ScrollToSelection = (elementId: any) => {
-  document.getElementById(`${elementId.item}`)?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-  console.log(elementId);
+const drawerWidth = 280;
 
-}
+/** Fixed navbar sits ~12px from top + ~72px tall — offset scroll targets accordingly */
+const NAV_SCROLL_OFFSET = 96;
 
-const drawerWidth = 240;
-
-const navItems = ["About", "Experience", "Educational Qualifications", "Skills",
-  //  "Contact Me"
-]
-
+const navItems = [
+  "About",
+  "Experience",
+  "Educational Qualifications",
+  "Skills",
+  "Projects",
+  "Contact Me",
+];
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -39,8 +40,16 @@ export default function Navbar(props: Props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const scrollToSection = (item: string) => {
+    const el = document.getElementById(item);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + globalThis.scrollY - NAV_SCROLL_OFFSET;
+    globalThis.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    setMobileOpen(false);
+  };
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Sushant Sharma
       </Typography>
@@ -48,7 +57,10 @@ export default function Navbar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => ScrollToSelection({ item })}>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => scrollToSection(item)}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -115,7 +127,6 @@ export default function Navbar(props: Props) {
 
     // Custom displacement effects
     <GlassSurface
-      // width={400}
       displace={0.5}
       distortionScale={-180}
       redOffset={0}
@@ -125,39 +136,51 @@ export default function Navbar(props: Props) {
       opacity={0.93}
       mixBlendMode="screen"
       style={{
-        position:"fixed",top:"20px",zIndex:"1000", width:"100%",left:"10%"
+        position: "fixed",
+        top: "12px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        zIndex: 1000,
+        width: "min(94vw, 1100px)",
+        maxWidth: "100%",
       }}
     >
-      <Box 
-      // sx={{ display: 'flex',justifyContent:'space-between'}}
-      >
-        <div>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-              Sushant Sharma
-            </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }} onClick={() => ScrollToSelection({ item })}>
-                  {item}
-                </Button>
-              ))}
-            </Box>
-          </Toolbar>
-        </div>
+      <Box sx={{ width: "100%" }}>
+        <Toolbar sx={{ justifyContent: "space-between", flexWrap: "wrap", gap: 1, minHeight: { xs: 56, md: 64 } }}>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ display: { md: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: { xs: 1, md: 0 },
+              display: { xs: "block", md: "block" },
+              fontSize: { xs: "1rem", sm: "1.15rem" },
+              whiteSpace: "nowrap",
+            }}
+          >
+            Sushant Sharma
+          </Typography>
+          <Box sx={{ display: { xs: "none", md: "flex" }, flexWrap: "wrap", gap: 0.5, justifyContent: "flex-end" }}>
+            {navItems.map((item) => (
+              <Button
+                key={item}
+                size="small"
+                sx={{ color: "#fff", fontSize: "0.8rem", px: 1.25 }}
+                onClick={() => scrollToSection(item)}
+              >
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
         <nav>
           <Drawer
             container={container}
@@ -165,17 +188,16 @@ export default function Navbar(props: Props) {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
             sx={{
-              display: { xs: 'block', sm: 'none' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              display: { xs: "block", md: "none" },
+              "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
             }}
           >
             {drawer}
           </Drawer>
         </nav>
-
       </Box>
     </GlassSurface>
 
