@@ -1177,7 +1177,7 @@ li {
 @media only screen and (max-width: 768px) {
   .header {
     padding: 6rem 1.5rem 2rem;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .intro {

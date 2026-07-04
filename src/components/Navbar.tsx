@@ -24,11 +24,11 @@ const drawerWidth = 280;
 const NAV_SCROLL_OFFSET = 96;
 
 const navItems = [
-  "About",
   "Experience",
-  "Educational Qualifications",
+  "About",
   "Skills",
   "Projects",
+  "Educational Qualifications",
   "Contact Me",
 ];
 
@@ -72,59 +72,6 @@ export default function Navbar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    // <Box sx={{ display: 'flex' }}>
-    //   <CssBaseline />
-    //   {/* <AppBar component="nav" style={{ backgroundColor: "rgba(100, 100, 100, 0.257)", border: "1px solid rgba(113, 102, 102, 0.257)" }}> */}
-    //   <AppBar component="nav" style={{ backgroundColor: "#262729", border: "1px solid rgba(113, 102, 102, 0.257)" }}>
-    //     <Toolbar>
-    //       <IconButton
-    //         color="inherit"
-    //         aria-label="open drawer"
-    //         edge="start"
-    //         onClick={handleDrawerToggle}
-    //         sx={{ mr: 2, display: { sm: 'none' } }}
-    //       >
-    //         <MenuIcon />
-    //       </IconButton>
-    //       <Typography
-    //         variant="h6"
-    //         component="div"
-    //         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-    //       >
-    //         Sushant Sharma
-    //       </Typography>
-    //       <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-    //         {navItems.map((item) => (
-    //           <Button key={item} sx={{ color: '#fff' }} onClick={() => ScrollToSelection({ item })}>
-    //             {item}
-    //           </Button>
-    //         ))}
-    //       </Box>
-    //     </Toolbar>
-    //   </AppBar>
-    //   <nav>
-    //     <Drawer
-    //       container={container}
-    //       variant="temporary"
-    //       open={mobileOpen}
-    //       onClose={handleDrawerToggle}
-    //       ModalProps={{
-    //         keepMounted: true, // Better open performance on mobile.
-    //       }}
-    //       sx={{
-    //         display: { xs: 'block', sm: 'none' },
-    //         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-    //       }}
-    //     >
-    //       {drawer}
-    //     </Drawer>
-    //   </nav>
-
-    // </Box>
-
-    // Basic usage
-
-
     // Custom displacement effects
     <GlassSurface
       displace={0.5}
